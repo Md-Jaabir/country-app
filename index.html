@@ -25,19 +25,21 @@
     </nav>
     <main>
         <div class="filter-options">
-            <div class="search">
+            <form class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search for a country...">
-            </div>
-            <div class="dropdown">
+                <input type="search" placeholder="Search for a country...">
+            </form>
+            <div class="dropdown" onclick="toggleDropdown()">
                 <span>Filter by region</span>
                 <i class="fa-solid fa-caret-down"></i>
-                <div class="menu">
+                
+                <div class="menu hide">
+                  <div class="item">All</div>
                     <div class="item">Africa</div>
-                    <div class="item">America</div>
+                    <div class="item">Americas</div>
                     <div class="item">Asia</div>
                     <div class="item">Europe</div>
-                    <div class="item">Ocenia</div>
+                    <div class="item">Oceania</div>
                 </div>
 
             </div>

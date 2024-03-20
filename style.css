@@ -63,6 +63,7 @@ main{
     padding: 35px 50px;
     width: 100%;
     background-color: var(--LightGray);
+    min-height: calc(100vh - 67px);
 }
 
 .dark *{
@@ -91,3 +92,6 @@ main{
     }
 }
 
+.hide{
+  display: none;
+}
