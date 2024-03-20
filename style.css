@@ -1,0 +1,93 @@
+:root{
+    --White:hsl(0, 0%, 100%);
+    --LightGray:hsl(0, 0%, 98%);
+    --DarkGray:hsl(0, 0%, 52%);
+    --DarkestBlue:hsl(200, 15%, 8%);
+    --DarkBlue:hsl(207, 26%, 17%);
+    --Blue:hsl(209, 23%, 22%);
+    --LightShadowColor:hsl(0, 9%, 94%);
+    --DarkShadowColor:hsl(208, 31%, 11%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,p,a,div,button,input{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+}
+
+
+.light *{
+    color: var(--DarkestBlue);
+}
+
+body{
+    min-height: 100vh;
+}
+
+nav{
+    padding: 20px 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px var(--LightShadowColor);
+}
+
+.dark nav{
+    background-color: var(--Blue);
+    box-shadow: 0 5px 10px var(--DarkShadowColor);
+}
+
+nav h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+nav .mode-switch{
+    display: flex;
+    gap: 7px;
+    background: none;
+    border: none;
+    outline: none;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+main{
+    padding: 35px 50px;
+    width: 100%;
+    background-color: var(--LightGray);
+}
+
+.dark *{
+    color: var(--White);
+}
+
+.dark main{
+    background-color: var(--DarkBlue);
+}
+
+@media screen and (max-width:400px) {
+    nav h2{
+        font-size: 17px;
+    }
+
+    nav{
+        padding-inline: 35px;
+    }
+
+    main{
+        padding-inline: 25px;
+    }
+
+    .search{
+        width: 100% !important;
+    }
+}
+
