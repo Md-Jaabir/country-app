@@ -25,16 +25,16 @@ function setData(country){
         <h2 class="name">${country.name}</h2>
         <div class="columns">
             <div class="left">
-                <p class="native-name"><strong>Native Name: </strong>${country.nativeName}</p>
-                <p class="populaition"><strong>Population: </strong>${commaSeparate(country.population)}</p>
-                <p class="region"><strong>Region: </strong>${country.region}</p>
-                <p class="sub-region"><strong>Sub Region: </strong>${country.subregion}</p>
-                <p class="capital"><strong>capital: </strong>${country.capital}</p>
+                <p class="native-name"><strong>Native Name: </strong>${country.nativeName?country.nativeName:"N/A"}</p>
+                <p class="populaition"><strong>Population: </strong>${country.population?commaSeparate(country.population):"N/A"}</p>
+                <p class="region"><strong>Region: </strong>${country.region?country.region:"N/A"}</p>
+                <p class="sub-region"><strong>Sub Region: </strong>${country.subregion?country.subregion:"N/A"}</p>
+                <p class="capital"><strong>capital: </strong>${country.capital?country.capital:"N/A"}</p>
             </div>
             <div class="right">
-                <p class="top-domain"><strong>Top Level Domail: </strong>${country.topLevelDomain.map(domain=>domain).join(", ")}</p>
-                <p class="currencies"><strong>Currencies: </strong>${country.currencies.map(currency=>currency.name).join(", ")}</p>
-                <p class="languages"><strong>Language: </strong>${country.languages.map(language=>language.name).join(", ")}</p>
+                <p class="top-domain"><strong>Top Level Domail: </strong>${country.topLevelDomain?country.topLevelDomain.map(domain=>domain).join(", "):"N/A"}</p>
+                <p class="currencies"><strong>Currencies: </strong>${country.currencies?country.currencies.map(currency=>currency.name).join(", "):"N/A"}</p>
+                <p class="languages"><strong>Language: </strong>${country.languages?country.languages.map(language=>language.name).join(", "):"N/A"}</p>
             </div>
         </div>
         <div class="border-countires">  

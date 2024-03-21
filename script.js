@@ -27,11 +27,13 @@ function themeSwitch(){
 function commaSeparate(number){
     let splitedNum=number.toString().split("");
     let string="";
-    for(let i=splitedNum.length-1;i>=0;i--){
-        if(i%3===1){
-            string=","+splitedNum[i].toString()+string;
+    let index;
+    for(let i=1;i<=splitedNum.length;i++){
+        index=splitedNum.length-i;
+        if(i%3===0 && index!=0){
+            string=","+splitedNum[index].toString()+string;
         }else{
-            string=splitedNum[i].toString()+string;
+            string=splitedNum[index].toString()+string;
         }
     }
     return string;

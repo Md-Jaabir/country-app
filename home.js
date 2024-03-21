@@ -28,9 +28,9 @@ function showData(counties){
             <img src="${country.flags.png}" alt="">
             <div class="desc">
                 <h3>${country.name}</h3>
-                <p class="population"><strong>Population:</strong> ${commaSeparate(country.population)}</p>
-                <p class="region"><strong>Region:</strong> ${country.region}</p>
-                <p class="capital"><strong>Capital:</strong> ${country.capital}</p>
+                <p class="population"><strong>Population:</strong> ${country.population?commaSeparate(country.population):"N/A"}</p>
+                <p class="region"><strong>Region:</strong> ${country.region?country.region:"N/A"}</p>
+                <p class="capital"><strong>Capital:</strong> ${country.capital?country.capital:"N/A"}</p>
             </div>
         </div>`;
         }).join("");
