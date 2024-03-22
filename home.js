@@ -16,7 +16,7 @@ function fetchCountries(){
 function search(query){
   
         let counties=currentCountries.filter(country=>{
-          return country.name.toLowerCase().includes(query.toLowerCase());
+          return country.name.common.toLowerCase().includes(query.toLowerCase());
           
         });
         showData(counties);
@@ -24,10 +24,10 @@ function search(query){
 
 function showData(counties){
   countryCont.innerHTML=counties.map(country=>{
-            return `<div class="country" onclick="openCountry('${country.name}')">
+            return `<div class="country" onclick="openCountry('${country.name.common}')">
             <img src="${country.flags.png}" alt="">
             <div class="desc">
-                <h3>${country.name}</h3>
+                <h3>${country.name.common}</h3>
                 <p class="population"><strong>Population:</strong> ${country.population?commaSeparate(country.population):"N/A"}</p>
                 <p class="region"><strong>Region:</strong> ${country.region?country.region:"N/A"}</p>
                 <p class="capital"><strong>Capital:</strong> ${country.capital?country.capital:"N/A"}</p>
